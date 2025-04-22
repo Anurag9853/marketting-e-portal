@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Portal - Transform Your Business</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10B981',
+                        secondary: '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4 px-2">
+                            <i class="fas fa-chart-line text-primary text-2xl mr-2"></i>
+                            <span class="font-bold text-gray-700 text-lg">Marketing Portal</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="index.html" class="py-4 px-2 text-primary border-b-4 border-primary font-semibold">Home</a>
+                        <a href="about.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-primary transition duration-300">About</a>
+                        <a href="entrepreneurs.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-primary transition duration-300">Entrepreneurs</a>
+                        <a href="mentors.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-primary transition duration-300">Mentors</a>
+                        <a href="investors.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-primary transition duration-300">Investors</a>
+                        <a href="contact.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-primary transition duration-300">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-3 nav-buttons">
+                    <!-- Login/Register buttons will be dynamically inserted here -->
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <i class="fas fa-bars text-gray-500 text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden mobile-menu md:hidden">
+            <ul class="">
+                <li><a href="index.html" class="block text-sm px-4 py-4 text-primary font-semibold">Home</a></li>
+                <li><a href="about.html" class="block text-sm px-4 py-4 text-gray-500 hover:text-primary transition duration-300">About</a></li>
+                <li><a href="entrepreneurs.html" class="block text-sm px-4 py-4 text-gray-500 hover:text-primary transition duration-300">Entrepreneurs</a></li>
+                <li><a href="mentors.html" class="block text-sm px-4 py-4 text-gray-500 hover:text-primary transition duration-300">Mentors</a></li>
+                <li><a href="investors.html" class="block text-sm px-4 py-4 text-gray-500 hover:text-primary transition duration-300">Investors</a></li>
+                <li><a href="contact.html" class="block text-sm px-4 py-4 text-gray-500 hover:text-primary transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 95vh;">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80');">
+            <span class="w-full h-full absolute opacity-75 bg-black"></span>
+        </div>
+        <div class="container relative mx-auto">
+            <div class="items-center flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                    <div class="text-white">
+                        <h1 class="text-5xl font-semibold leading-tight mb-4">Transform Your Marketing Strategy</h1>
+                        <p class="text-xl mb-8">Unlock the power of data-driven marketing with our comprehensive platform.</p>
+                        <a href="#features" class="bg-primary text-white font-bold px-8 py-4 rounded-full hover:bg-green-600 transition duration-300 inline-block">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg hover:transform hover:scale-105 transition duration-300">
+                        <div class="px-4 py-5 flex-auto">
+                            <div class="text-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-5 shadow-lg rounded-full bg-primary">
+                                <i class="fas fa-chart-line text-xl"></i>
+                            </div>
+                            <h6 class="text-xl font-semibold">Data Analytics</h6>
+                            <p class="mt-2 mb-4 text-gray-600">
+                                Get real-time insights into your marketing campaigns with advanced analytics tools.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-4/12 px-4 text-center">
+                    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg hover:transform hover:scale-105 transition duration-300">
+                        <div class="px-4 py-5 flex-auto">
+                            <div class="text-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-5 shadow-lg rounded-full bg-secondary">
+                                <i class="fas fa-users text-xl"></i>
+                            </div>
+                            <h6 class="text-xl font-semibold">Audience Targeting</h6>
+                            <p class="mt-2 mb-4 text-gray-600">
+                                Reach your ideal customers with precision targeting and segmentation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+                    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg hover:transform hover:scale-105 transition duration-300">
+                        <div class="px-4 py-5 flex-auto">
+                            <div class="text-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-5 shadow-lg rounded-full bg-primary">
+                                <i class="fas fa-rocket text-xl"></i>
+                            </div>
+                            <h6 class="text-xl font-semibold">Campaign Automation</h6>
+                            <p class="mt-2 mb-4 text-gray-600">
+                                Automate your marketing campaigns and save time with smart workflows.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="pb-20 bg-gray-100 -mt-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center mt-32">
+                <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+                    <h3 class="text-3xl mb-2 font-semibold leading-normal">
+                        Drive Results with Data-Driven Marketing
+                    </h3>
+                    <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+                        Our platform helps businesses achieve remarkable growth through strategic marketing initiatives and comprehensive analytics.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="text-center">
+                            <h2 class="text-4xl font-bold text-primary">500+</h2>
+                            <p class="text-gray-600">Active Campaigns</p>
+                        </div>
+                        <div class="text-center">
+                            <h2 class="text-4xl font-bold text-secondary">98%</h2>
+                            <p class="text-gray-600">Client Satisfaction</p>
+                        </div>
+                        <div class="text-center">
+                            <h2 class="text-4xl font-bold text-primary">24/7</h2>
+                            <p class="text-gray-600">Support</p>
+                        </div>
+                        <div class="text-center">
+                            <h2 class="text-4xl font-bold text-secondary">50K+</h2>
+                            <p class="text-gray-600">Leads Generated</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
+                    <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-primary">
+                        <img alt="Marketing Analytics" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" class="w-full align-middle rounded-t-lg">
+                        <blockquote class="relative p-8 mb-4">
+                            <h4 class="text-xl font-bold text-white">
+                                Ready to Transform Your Marketing?
+                            </h4>
+                            <p class="text-md font-light mt-2 text-white">
+                                Join thousands of successful businesses using our platform to achieve their marketing goals.
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center text-center mb-24">
+                <div class="w-full lg:w-6/12 px-4">
+                    <h2 class="text-4xl font-semibold">What Our Clients Say</h2>
+                    <p class="text-lg leading-relaxed m-4 text-gray-600">
+                        Hear from businesses that have transformed their marketing with our platform.
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-wrap">
+                <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4">
+                    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                        <div class="px-6 py-8">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-green-100 text-primary mb-4 flex-shrink-0">
+                                    <i class="fas fa-quote-left text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h2 class="text-gray-900 text-lg font-medium">Sarah Johnson</h2>
+                                    <p class="text-primary font-medium">Marketing Director</p>
+                                </div>
+                            </div>
+                            <p class="leading-relaxed text-gray-600">
+                                "The analytics tools have revolutionized how we approach our marketing campaigns. We've seen a 200% increase in ROI since implementing this platform."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-4/12 px-4">
+                    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                        <div class="px-6 py-8">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-secondary mb-4 flex-shrink-0">
+                                    <i class="fas fa-quote-left text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h2 class="text-gray-900 text-lg font-medium">Michael Chen</h2>
+                                    <p class="text-secondary font-medium">CEO, TechStart</p>
+                                </div>
+                            </div>
+                            <p class="leading-relaxed text-gray-600">
+                                "The automation features have saved us countless hours. Our team can now focus on strategy rather than repetitive tasks."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4">
+                    <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                        <div class="px-6 py-8">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-green-100 text-primary mb-4 flex-shrink-0">
+                                    <i class="fas fa-quote-left text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h2 class="text-gray-900 text-lg font-medium">Emily Rodriguez</h2>
+                                    <p class="text-primary font-medium">Growth Manager</p>
+                                </div>
+                            </div>
+                            <p class="leading-relaxed text-gray-600">
+                                "The customer support team is exceptional. They've helped us optimize our campaigns and achieve better results than ever before."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-20">
+        <div class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20" style="height: 80px;">
+            <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-primary fill-current" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap text-center justify-center">
+                <div class="w-full lg:w-6/12 px-4">
+                    <h2 class="text-4xl font-semibold text-white">Ready to Get Started?</h2>
+                    <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-100">
+                        Join thousands of businesses already transforming their marketing strategies.
+                    </p>
+                    <div class="mt-8">
+                        <a href="register.html" class="bg-white text-primary font-bold px-8 py-4 rounded-full hover:bg-gray-100 transition duration-300 inline-block">
+                            Start Free Trial
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-gray-800 pt-8 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap text-left lg:text-left">
+                <div class="w-full lg:w-6/12 px-4">
+                    <h4 class="text-3xl font-semibold text-white">Let's keep in touch!</h4>
+                    <h5 class="text-lg mt-0 mb-2 text-gray-400">
+                        Find us on any of these platforms.
+                    </h5>
+                    <div class="mt-6 lg:mb-0 mb-6">
+                        <a href="#" class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-flex hover:bg-blue-600 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-white text-blue-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-flex hover:bg-blue-800 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-white text-pink-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-flex hover:bg-pink-600 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 inline-flex hover:bg-gray-900 hover:text-white transition duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap items-top mb-6">
+                        <div class="w-full lg:w-4/12 px-4 ml-auto">
+                            <span class="block uppercase text-gray-200 text-sm font-semibold mb-2">Useful Links</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="about.html">About Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="blog.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block uppercase text-gray-200 text-sm font-semibold mb-2">Other Resources</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="terms.html">Terms & Conditions</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="privacy.html">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="support.html">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-700">
+            <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm text-gray-400 font-semibold py-1">
+                        Copyright © <span id="current-year">2024</span> Marketing Portal. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

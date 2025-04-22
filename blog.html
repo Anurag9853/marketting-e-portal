@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Marketing Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .blog-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="text-2xl font-bold text-indigo-600">Marketing Portal</a>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="index.html" class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                        <a href="about.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
+                        <a href="entrepreneurs.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Entrepreneurs</a>
+                        <a href="mentors.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Mentors</a>
+                        <a href="investors.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Investors</a>
+                        <a href="blog.html" class="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Blog</a>
+                        <a href="contact.html" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="blog-hero py-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-4">Marketing Insights & Updates</h1>
+            <p class="text-xl mb-8">Stay updated with the latest trends, tips, and strategies in digital marketing</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Featured Post -->
+            <div class="md:col-span-2">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Featured Post" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="text-sm text-indigo-600 mb-2">Featured • Marketing Strategy</div>
+                        <h2 class="text-2xl font-bold mb-4">The Future of Digital Marketing in 2025</h2>
+                        <p class="text-gray-600 mb-4">Explore the emerging trends and technologies that will shape the digital marketing landscape in the coming years...</p>
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium">Read More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Search -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold mb-4">Search</h3>
+                    <div class="relative">
+                        <input type="text" placeholder="Search articles..." class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <button class="absolute right-3 top-2 text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Marketing Strategy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Social Media</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Content Marketing</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">SEO</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-indigo-600">Analytics</a></li>
+                    </ul>
+                </div>
+
+                <!-- Recent Posts -->
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-lg font-semibold mb-4">Recent Posts</h3>
+                    <div class="space-y-4">
+                        <div class="border-b pb-4">
+                            <a href="#" class="text-gray-800 hover:text-indigo-600 font-medium">10 Social Media Trends to Watch</a>
+                            <p class="text-sm text-gray-500 mt-1">April 15, 2025</p>
+                        </div>
+                        <div class="border-b pb-4">
+                            <a href="#" class="text-gray-800 hover:text-indigo-600 font-medium">Content Marketing Best Practices</a>
+                            <p class="text-sm text-gray-500 mt-1">April 10, 2025</p>
+                        </div>
+                        <div>
+                            <a href="#" class="text-gray-800 hover:text-indigo-600 font-medium">SEO Tips for 2025</a>
+                            <p class="text-sm text-gray-500 mt-1">April 5, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <!-- Blog Post 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Blog Post 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="text-sm text-indigo-600 mb-2">Social Media</div>
+                    <h3 class="text-xl font-bold mb-4">Maximizing Your Social Media Presence</h3>
+                    <p class="text-gray-600 mb-4">Learn how to create engaging content and build a strong social media following...</p>
+                    <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium">Read More →</a>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Blog Post 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="text-sm text-indigo-600 mb-2">Content Marketing</div>
+                    <h3 class="text-xl font-bold mb-4">Creating Engaging Content</h3>
+                    <p class="text-gray-600 mb-4">Discover the secrets to creating content that resonates with your audience...</p>
+                    <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium">Read More →</a>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Blog Post 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="text-sm text-indigo-600 mb-2">Analytics</div>
+                    <h3 class="text-xl font-bold mb-4">Understanding Marketing Analytics</h3>
+                    <p class="text-gray-600 mb-4">Learn how to interpret data and make data-driven marketing decisions...</p>
+                    <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">About Us</h3>
+                    <p class="text-gray-400">Marketing Portal is your one-stop solution for all digital marketing needs.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Punjab, India</li>
+                        <li>+917011000000</li>
+                        <li>anuragsingh@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-indigo-600 px-4 py-2 rounded-r-lg hover:bg-indigo-700">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <span id="current-year"></span> Marketing Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html> 

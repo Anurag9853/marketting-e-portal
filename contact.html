@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Marketing Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .notification {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            z-index: 9999;
+            display: none;
+            animation: slideIn 0.3s ease-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .notification.success {
+            background-color: #10B981;
+            color: white;
+        }
+        .notification.error {
+            background-color: #EF4444;
+            color: white;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#10B981',
+                        secondary: '#3B82F6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Notification Elements -->
+    <div id="successNotification" class="notification success">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span>Message sent successfully!</span>
+        </div>
+    </div>
+    <div id="errorNotification" class="notification error">
+        <div class="flex items-center">
+            <i class="fas fa-exclamation-circle mr-2"></i>
+            <span id="errorMessage">An error occurred.</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4 px-2">
+                            <i class="fas fa-chart-line text-primary text-2xl mr-2"></i>
+                            <span class="font-bold text-gray-700 text-lg">Marketing Portal</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="index.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-primary transition duration-300">Home</a>
+                        <a href="about.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-primary transition duration-300">About</a>
+                        <a href="entrepreneurs.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-primary transition duration-300">Entrepreneurs</a>
+                        <a href="mentors.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-primary transition duration-300">Mentors</a>
+                        <a href="investors.html" class="py-4 px-2 text-gray-500 font-semibold hover:text-primary transition duration-300">Investors</a>
+                        <a href="contact.html" class="py-4 px-2 text-primary border-b-4 border-primary font-semibold">Contact</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-3 nav-buttons">
+                    <!-- Login/Register buttons will be dynamically inserted here -->
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <i class="fas fa-bars text-gray-500 text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="hidden mobile-menu md:hidden">
+            <ul class="">
+                <li><a href="index.html" class="block text-sm px-4 py-4 text-gray-500 hover:text-primary transition duration-300">Home</a></li>
+                <li><a href="about.html" class="block text-sm px-4 py-4 text-gray-500 hover:text-primary transition duration-300">About</a></li>
+                <li><a href="entrepreneurs.html" class="block text-sm px-4 py-4 text-gray-500 hover:text-primary transition duration-300">Entrepreneurs</a></li>
+                <li><a href="mentors.html" class="block text-sm px-4 py-4 text-gray-500 hover:text-primary transition duration-300">Mentors</a></li>
+                <li><a href="investors.html" class="block text-sm px-4 py-4 text-gray-500 hover:text-primary transition duration-300">Investors</a></li>
+                <li><a href="contact.html" class="block text-sm px-4 py-4 text-primary font-semibold">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 50vh;">
+        <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80');">
+            <span class="w-full h-full absolute opacity-75 bg-black"></span>
+        </div>
+        <div class="container relative mx-auto">
+            <div class="items-center flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+                    <div class="text-white">
+                        <h1 class="text-5xl font-semibold leading-tight mb-4">Contact Us</h1>
+                        <p class="text-xl mb-8">Get in touch with our team for any questions or inquiries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section class="relative py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white">
+                        <div class="flex-auto p-5 lg:p-10">
+                            <h4 class="text-2xl font-semibold mb-4">Send us a message</h4>
+                            <p class="leading-relaxed mt-1 mb-4 text-gray-600">
+                                Fill out the form below and we'll get back to you as soon as possible.
+                            </p>
+                            <form id="contactForm" class="mt-6">
+                                <div class="relative w-full mb-3">
+                                    <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="name">
+                                        Full Name
+                                    </label>
+                                    <input type="text" id="name" name="name" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Your name" required>
+                                </div>
+                                <div class="relative w-full mb-3">
+                                    <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="phone">
+                                        Phone Number
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Your phone number" required>
+                                </div>
+                                <div class="relative w-full mb-3">
+                                    <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="message">
+                                        Message
+                                    </label>
+                                    <textarea id="message" name="message" rows="4" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Type your message here..." required></textarea>
+                                </div>
+                                <div class="text-center mt-6">
+                                    <button type="submit" class="bg-primary text-white active:bg-green-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full transition duration-300">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white">
+                        <div class="flex-auto p-5 lg:p-10">
+                            <h4 class="text-2xl font-semibold mb-4">Contact Information</h4>
+                            <p class="leading-relaxed mt-1 mb-4 text-gray-600">
+                                We're here to help! Reach out to us through any of these channels.
+                            </p>
+                            <div class="mt-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="text-primary p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h6 class="text-xl font-semibold">Our Location</h6>
+                                        <p class="text-gray-600">Punjab, India</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <div class="text-primary p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h6 class="text-xl font-semibold">Phone Number</h6>
+                                        <p class="text-gray-600">+917011000000</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center mb-4">
+                                    <div class="text-primary p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h6 class="text-xl font-semibold">Email Address</h6>
+                                        <p class="text-gray-600">anuragsingh@gmail.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="text-primary p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <h6 class="text-xl font-semibold">Working Hours</h6>
+                                        <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday - Sunday: Closed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="relative py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white">
+                <div class="flex-auto p-5 lg:p-10">
+                    <div class="h-96 w-full rounded-lg" id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-gray-800 pt-8 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap text-left lg:text-left">
+                <div class="w-full lg:w-6/12 px-4">
+                    <div class="flex flex-wrap items-top mb-6">
+                        <div class="w-full lg:w-4/12 px-4 ml-auto">
+                            <span class="block uppercase text-gray-200 text-sm font-semibold mb-2">Useful Links</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="about.html">About Us</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="blog.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-full lg:w-4/12 px-4">
+                            <span class="block uppercase text-gray-200 text-sm font-semibold mb-2">Other Resources</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="terms.html">Terms & Conditions</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="privacy.html">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a class="text-gray-400 hover:text-white font-semibold block pb-2 text-sm" href="support.html">Support</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-700">
+            <div class="flex flex-wrap items-center md:justify-between justify-center">
+                <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                    <div class="text-sm text-gray-400 font-semibold py-1">
+                        Copyright © <span id="current-year">2024</span> Marketing Portal. All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Notification functions
+        function showMessage(message) {
+            const notification = document.getElementById('successNotification');
+            notification.querySelector('span').textContent = message;
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        function showError(message) {
+            const notification = document.getElementById('errorNotification');
+            document.getElementById('errorMessage').textContent = message;
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            try {
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+                
+                // Get form data
+                const formData = {
+                    name: document.getElementById('name').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    message: document.getElementById('message').value.trim()
+                };
+
+                // Validate form data
+                if (!formData.name || !formData.phone || !formData.message) {
+                    throw new Error('Please fill in all required fields');
+                }
+                
+                // Send as JSON
+                const response = await fetch('http://localhost/project2/backend/api/contact/submit.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                console.log('Response:', result);
+                
+                if (response.ok) {
+                    showMessage('Message sent successfully! We will get back to you soon.');
+                    e.target.reset();
+                } else {
+                    showError(result.message || 'Failed to send message. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showError(error.message || 'An error occurred. Please try again later.');
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
+        });
+
+        // Initialize map
+        function initMap() {
+            const location = { lat: 37.7749, lng: -122.4194 }; // San Francisco coordinates
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location,
+                styles: [
+                    {
+                        featureType: 'all',
+                        elementType: 'labels.text.fill',
+                        stylers: [{ color: '#7c93a3' }]
+                    },
+                    {
+                        featureType: 'all',
+                        elementType: 'labels.text.stroke',
+                        stylers: [{ visibility: 'off' }]
+                    }
+                ]
+            });
+            new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'Marketing Portal'
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
